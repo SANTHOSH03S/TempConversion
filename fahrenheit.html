@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fahrenheit</title>
+</head>
+<body>
+
+    <style>
+        .head h1{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .celsius{
+            margin-top: 7%;
+            width: 350px;
+            height: 270px;
+            background-color:#ffffff;
+            padding-top: 50px;
+            box-shadow: 0px 0px 5px 0px;
+            border-radius: 10px;
+        }
+        .inputValue{
+            width: 250px;
+            height: 40px;
+            border-radius: 10px;
+            font-size: 23px;
+            color: #797878;
+        }
+        .outputValue{
+            margin-top: 30px;
+            width: 250px;
+            height: 40px;
+            border-radius: 10px;
+            font-size: 23px;
+            color: #797878;
+            
+        }
+        button{
+            margin-top: 30px;
+            width: 120px;
+            height: 40px;
+            background-color: rgb(61, 61, 223);
+            border: none;
+            color: white;
+            font-size: 21px;
+            border-radius: 10px;
+        }
+    </style>
+
+    <div class="head">
+        <center>
+        <h1>Celsius to  Fahrenheit</h1>
+        </center>
+    </div>
+    <center>
+    <div class="celsius">
+        <center>
+        <input type="number" class="inputValue" id="inputValue" placeholder="Enter a Celsius:" ><br><br>
+        <input type="number"  class="outputValue" id="outputValue" readonly><br><br>
+        <button onclick="convert()">Convert</button>
+        </center>
+    </div>
+    </center>
+    <script>
+        function convert(){
+        var inputElement = document.getElementById('inputValue');
+        var displayValue = document.getElementById('outputValue');
+        var input = inputElement.value;
+        input = (input*1.8)+32;
+        displayValue.value=input;
+        }
+    </script>
+    
+</body>
+</html>
